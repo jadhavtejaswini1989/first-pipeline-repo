@@ -2,17 +2,10 @@ pipeline{
     agent any
     stages{
         stage ('my first job to print'){
-            steps {
-                sh 'echo hello_jenkins'
-                }
-        }
-stage ('building the job'){
-steps{
-sh 'echo code is buildng'
-}}
-stage ('building the job'){
-steps{
-sh 'echo code is deploying'
-}}
+            steps {sh 'echo hello_jenkins'} }
+        stage ('building the job'){
+            steps{sh 'echo code is buildng'}}
+        stage ('building the job'){
+            steps{sh 'echo code is deploying'}}
     }
 }
